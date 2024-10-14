@@ -1,0 +1,7 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+        "xONEDRIVE_APP_ID": "your_app_id",
+        "xONEDRIVE_APP_SECRET": "your_app_secret",
+    }
+  }

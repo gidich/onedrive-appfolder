@@ -1,0 +1,22 @@
+{
+  "name": "onedrive-appfolder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "nodemon dist/index.js",
+    "test": "npx jest --watchAll=true"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "nodemon": "^3.1.7",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
