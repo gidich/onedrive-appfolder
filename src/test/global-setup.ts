@@ -4,8 +4,8 @@ import config from '../../test.settings.json';
 const globalSetup = () => {
   let localConfig = {Values: {}};
 
-  if (!fs.existsSync('./../local.settings.json')) {
-    localConfig = require('./../local.settings.json');
+  if (!fs.existsSync('../../local.settings.json')) {
+    localConfig = require('../../local.settings.json');
   }
 
   process.env = {
