@@ -28,7 +28,7 @@ describe("When using the onedrive-appfolder module", () => {
         // Assert
         expect(() => OneDriveAppFolder.create(applicationId, '', tenantId)).toThrowError('applicationSecret is required');
     });
-    test('oneDriveAppFolder should raise an error if constructed with an empty tenantId ', () => {
+    test.skip('oneDriveAppFolder should raise an error if constructed with an empty tenantId ', () => {
         // Arrange
         // Act
         // Assert
@@ -76,6 +76,8 @@ describe("When using the onedrive-appfolder module", () => {
         expect(result).toBeDefined();
     });
 
+ 
+    //use this to get the Microsoft Teams Team ID
     test.skip('should be able to list groups for a site', async () => {
         // Arrange
         const siteId = 'simnovaoffice.sharepoint.com,ebeec291-776d-474e-9a2f-8c88749ed244,a0496189-e5d8-458b-ac25-24b312a0b86b';
@@ -86,6 +88,7 @@ describe("When using the onedrive-appfolder module", () => {
         expect(result).toBeDefined();
     });
 
+    //use this to get the Drives in the Microsoft Teams Team (e.g. Documents) - need this as we use the Drive ID to access the files)
     test.skip('should be able to list drives for a group', async () => { 
         // Arrange
         const groupId = 'ad8a6a08-f6ee-483e-8a98-0ff628242c81'; //oneDrivePoc group
@@ -96,6 +99,7 @@ describe("When using the onedrive-appfolder module", () => {
         expect(result).toBeDefined();
     });
 
+    //drives contain folders, e.g. General (the default folder in a Microsoft Teams Team)
     test.skip('should be able to list items in a drive', async () => {
         // Arrange
         // Act

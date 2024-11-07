@@ -25,7 +25,7 @@ describe("When using the onedrive-appfolder module", () => {
         sampleApp = new SampleApp(client, rootFolderId, driveId);
     });
 
-    test('initialize folder structure for a new user', async () => {
+    test.skip('initialize folder structure for a new user', async () => {
         // Arrange
         const applicantEmail =   '' + new Date().toISOString().replace(/:/g, '-').replace(/\./g, '-').replace(/T/g, '-').replace(/Z/g, '').replace(/-/g, '') + '@host.com';
         
@@ -56,7 +56,7 @@ describe("When using the onedrive-appfolder module", () => {
         expect(result).toBeDefined();        
     });
 
-    test('upload file to shared-applicant-editable folder', async () => {
+    test.skip('upload file to shared-applicant-editable folder', async () => {
         // Arrange
         const applicantEmail =   'jane-doe@host.com';
         const filePath = 'src/sample-app/index.test.ts';

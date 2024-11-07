@@ -348,7 +348,7 @@ export class OneDriveAppFolder implements Connection, OneDriveClient {
       client_id: this.applicationId,
       client_secret: this.applicationSecret,
       grant_type: 'client_credentials',
-      scope: 'https://graph.microsoft.com/.default', //'api://2a98ceb0-bb4b-4a19-8fab-70464343fd8e/.default', //'https://graph.microsoft.com/.default',
+      scope: 'https://graph.microsoft.com/.default' //, Sites.Selected', //'api://2a98ceb0-bb4b-4a19-8fab-70464343fd8e/.default', //'https://graph.microsoft.com/.default',
     }).toString();
     const response = await fetch(`https://login.microsoftonline.com/${this.tenantId}/oauth2/v2.0/token`, {
       method: 'POST',
@@ -357,6 +357,7 @@ export class OneDriveAppFolder implements Connection, OneDriveClient {
       },
       body: body,
       });
+      console.log('response', response);
       return response.json();
     }    
 }   
